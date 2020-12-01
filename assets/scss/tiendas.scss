@@ -1,0 +1,233 @@
+.carousel-control-prev-icon{ 
+  display: none !important;
+  height: fit-content;
+  padding: 1rem;
+  background-color: black !important;
+}
+.carousel-control-next-icon{
+  display: none !important;
+  padding: 1rem;
+  background-color:  black !important;
+}
+.slide:hover{
+  .carousel-control-prev-icon{ 
+    display: inline-block !important;
+  }
+  .carousel-control-next-icon{
+    display: inline-block !important;
+  }
+}
+.imgSlider{
+  height: 400px;
+  width: 100%;
+  background-image: url(/img/background-tiendas.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.section{
+  padding: 0 .5rem;
+ &__grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ &--tiendas{
+   flex-wrap: nowrap;
+   overflow-x: scroll;
+ }
+
+ }
+ &__top__tiendas{
+  width: 100%;
+  height: 240px;
+  &__container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 128, 79);
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    h2{
+      color: white;
+
+    }
+    p{
+      color: white;
+    }
+  }
+}
+}
+
+.card{
+  border-radius: 10px !important;
+  overflow: hidden;
+  
+}
+.card--productos{
+  display: flex !important;
+  flex-direction: unset !important;
+  background: white;
+  border-radius: 2px;
+  width: 100% !important;
+  height: fit-content !important;
+  padding: .5rem !important;
+  margin: 1rem .2rem !important;
+  align-items: center;
+  * {
+    transition: .2s;
+  }
+  div{
+    height: 70px;
+  }
+  img{
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+    margin-right: 1rem;
+
+  }
+
+  h4{
+    width: fit-content;
+    display: flex;
+    margin-right: 2rem;
+
+  }
+  p{
+    display: block;
+    width: fit-content;
+    animation-name: aparecer;
+    animation-duration: .4s;
+  }
+
+
+}
+.card--tiendas{
+  min-width: 320px !important;
+  max-width: 320px !important;
+  margin: .8rem .5rem !important;
+  padding: 0 !important;
+  &__background{
+    width: 100%;
+    height: 140px;
+    background-size: cover;
+  }
+  &__imagen{
+    display: flex;
+    height: 80px;
+    width: 80px;
+    margin: auto;
+    margin-top: -3.5rem;
+  }
+  &__texto{
+    display: grid;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 480px){
+ 
+  .card--productos{
+    background: white;
+    border-radius: 2px;
+    display: grid !important;
+    width: 222px !important;
+    min-width: 222px !important;
+    height: 280px !important;
+    margin: 0 .8rem;
+    justify-content: center;
+    padding: 0 !important;
+    * {
+      transition: .2s;
+    }
+    div{
+      height: 70px;
+    }
+    img{
+      margin: 0;
+      margin-top: .5rem;
+      width: 200px;
+      height: 180px;
+      border-radius: 2px;
+  
+    }
+  
+    h4{
+      width: fit-content;
+
+  
+    }
+    p{
+      display: none;
+      width: fit-content;
+      animation-name: aparecer;
+      animation-duration: .4s;
+    }
+  
+  }
+
+  .card--productos:hover{
+    cursor: pointer;
+    height: 280px;
+    img{
+      width: 222px;
+      height: 190px;
+      margin-top: 0px !important;
+    }
+    h4{
+      margin-left: 10px;
+    }
+    p{
+      display: block;
+      margin-left: 10px;
+    }
+  }
+ 
+  .section__grid--tiendas{
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .5rem;
+    overflow: hidden;
+  
+  }
+  .card--tiendas{
+    
+    min-width: 280px !important;
+    max-width: 280px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    &__background{
+      width: 100%;
+      height: 180px;
+      background-size: cover;
+    }
+    &__imagen{
+      display: flex;
+      height: 80px;
+      width: 80px;
+      margin: auto;
+      margin-top: -3.5rem;
+    }
+    &__texto{
+      display: grid;
+      justify-content: center;
+    }
+  }
+ 
+ 
+  .modalContent{
+    display: grid;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 910px){
+  .section__grid--tiendas{
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
