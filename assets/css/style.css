@@ -388,7 +388,7 @@ body {
   width: 100%; }
   .section__background {
     margin-top: 0;
-    background-image: url(/img/background.jpg);
+    background-image: url(https://waltercristanchi.github.io/img/background.jpg);
     background-size: cover;
     height: 100%;
     border-radius: 20px; }
