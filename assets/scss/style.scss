@@ -2,6 +2,7 @@
 @import "tiendas";
 @import "blog";
 @import "colors";
+@import "faqs";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 body{
   font-family: 'Roboto', sans-serif;
@@ -54,6 +55,7 @@ body{
     display: grid;
     grid-template-columns: 1fr;
   }
+
   &__titulo{
     display: grid;
   justify-content: center;
@@ -114,6 +116,12 @@ body{
     }
   }
 
+}
+&__acerca{
+
+  img{
+    border-radius: 20px !important;
+  }
 }
 &__contenido{
   display: grid;
