@@ -1,15 +1,26 @@
-.background__blog{
+.section__background__blog{
   background-image: url(/img/background-blog.jpg);
   background-size: cover;
-  width: 100%;
+  width: 85%;
   height: 480px;
+  border-radius: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  &__title{
+    background: black;
+    color: white;
+    border-radius: 30px;
+    padding: 0 1rem;
 
+
+  }
 }
 .section__posts{
   &__container{
     display: grid;
-    grid-row-gap: .5rem;
-    grid-column-gap: .5rem;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
     @media screen and (min-width: 650px){
       grid-template-columns: 1fr 1fr;
     }
@@ -27,7 +38,7 @@
     justify-content: center;
     transition: .2s;
     h3{
-      margin-left: .5rem;
+      margin: auto;;
     }
     p{
       margin-left: .5rem;

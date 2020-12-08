@@ -10,10 +10,20 @@
   text-align: center;
 
 }
-.section__faqs__questions{
-  display: grid;
+.section__faqs{
+  &__questions{
+    display: grid;
   justify-content: center;
+  }
+  &__contact__grid{
+    display: grid;
+    @media screen and (min-width: 768px){
+      grid-template-columns: 1fr 1fr;
+      
+    }
+  }
 }
+
 .search__faqs{
   width: 768px;
   display: flex;
@@ -25,6 +35,7 @@
   border: none;
   border: 1px solid rgb(230, 230, 230);
   border-radius: 20px;
+
   input {
     background: none;
     border: none;
@@ -52,5 +63,35 @@
   }
   &__description{
     font-size: .8rem;
+  }
+}
+.contact{
+  width: 100%;
+  display: grid;
+  &__form{
+    display: grid;
+    margin: auto;
+
+    @media screen and (min-width: 768px){
+      width: 512px;
+
+    }
+    input{
+
+      padding: .5rem;
+      margin: .3rem;
+      border: none;
+      border: 1px solid rgb(197, 197, 197);
+      border-radius: 30px;
+      outline: none;
+    }
+    textarea{
+      padding: .5rem;
+      margin: .3rem;
+      border: none;
+      border: 1px solid rgb(197, 197, 197);
+      border-radius: 30px;
+      outline: none;;
+    }
   }
 }

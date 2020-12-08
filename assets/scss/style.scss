@@ -32,6 +32,7 @@ body{
 
 }
 
+
 .contenido{
   padding: 0 .5rem;
 }
@@ -121,6 +122,13 @@ body{
 
   img{
     border-radius: 20px !important;
+  }
+  p{
+    background: black;
+    color: white;
+    padding: 0 1rem;
+    border-radius: 30px;
+
   }
 }
 &__contenido{

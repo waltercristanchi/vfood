@@ -16,34 +16,10 @@ header a:hover {
     width: 30px;
     margin-right: .7rem;
     transition: .2s; }
-  .socialMedia--facebook:hover {
+  .socialMedia img:hover {
     cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: blue;
-    color: blue; }
-  .socialMedia--twitter:hover {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: #0066ff;
-    color: #0066ff; }
-  .socialMedia--instagram:hover {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: purple;
-    color: purple; }
-  .socialMedia--whatsapp:hover {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: rgba(47, 255, 47, 0.705);
-    color: rgba(47, 255, 47, 0.705); }
+    height: 35px;
+    width: 35px; }
 
 .search {
   display: none; }
@@ -106,7 +82,7 @@ header a:hover {
   .section__grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; }
+    justify-content: center; }
     .section__grid--tiendas {
       flex-wrap: nowrap;
       overflow-x: scroll; }
@@ -125,7 +101,10 @@ header a:hover {
       .section__top__tiendas__container h2 {
         color: white; }
       .section__top__tiendas__container p {
-        color: white; }
+        background: black;
+        color: white;
+        padding: .2rem 1rem;
+        border-radius: 30px; }
 
 .card {
   border-radius: 10px !important;
@@ -161,8 +140,8 @@ header a:hover {
     animation-duration: .4s; }
 
 .card--tiendas {
-  min-width: 320px !important;
-  max-width: 320px !important;
+  min-width: 380px !important;
+  max-width: 380px !important;
   margin: .8rem .5rem !important;
   padding: 0 !important; }
   .card--tiendas__background {
@@ -184,12 +163,15 @@ header a:hover {
     background: white;
     border-radius: 2px;
     display: grid !important;
-    width: 222px !important;
-    min-width: 222px !important;
+    width: 320px !important;
+    min-width: 320px !important;
     height: 280px !important;
     margin: 0 .8rem;
     justify-content: center;
     padding: 0 !important; }
+    .card--productos__texto {
+      display: grid;
+      justify-content: center; }
     .card--productos * {
       transition: .2s; }
     .card--productos div {
@@ -197,7 +179,7 @@ header a:hover {
     .card--productos img {
       margin: 0;
       margin-top: .5rem;
-      width: 200px;
+      width: 300px;
       height: 180px;
       border-radius: 2px; }
     .card--productos h4 {
@@ -211,23 +193,26 @@ header a:hover {
     cursor: pointer;
     height: 280px; }
     .card--productos:hover img {
-      width: 222px;
+      width: 320px;
       height: 190px;
       margin-top: 0px !important; }
     .card--productos:hover h4 {
       margin-left: 10px; }
     .card--productos:hover p {
-      display: block;
-      margin-left: 10px; }
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 .5rem; }
   .section__grid--tiendas {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
     overflow: hidden; }
   .card--tiendas {
-    min-width: 280px !important;
-    max-width: 280px !important;
+    min-width: 380px !important;
+    max-width: 380px !important;
     margin: 0 !important;
     padding: 0 !important; }
     .card--tiendas__background {
@@ -247,22 +232,31 @@ header a:hover {
     display: grid;
     justify-content: center; } }
 
-@media screen and (min-width: 910px) {
+@media screen and (min-width: 1600px) {
   .section__grid--tiendas {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr; } }
 
-.background__blog {
+.section__background__blog {
   background-image: url(/img/background-blog.jpg);
   background-size: cover;
-  width: 100%;
-  height: 480px; }
+  width: 85%;
+  height: 480px;
+  border-radius: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+  .section__background__blog__title {
+    background: black;
+    color: white;
+    border-radius: 30px;
+    padding: 0 1rem; }
 
 .section__posts__container {
   display: grid;
-  grid-row-gap: .5rem;
-  grid-column-gap: .5rem; }
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem; }
   @media screen and (min-width: 650px) {
     .section__posts__container {
       grid-template-columns: 1fr 1fr; } }
@@ -280,7 +274,7 @@ header a:hover {
   justify-content: center;
   transition: .2s; }
   .section__posts__card h3 {
-    margin-left: .5rem; }
+    margin: auto; }
   .section__posts__card p {
     margin-left: .5rem;
     height: 120px;
@@ -320,6 +314,12 @@ header a:hover {
   display: grid;
   justify-content: center; }
 
+.section__faqs__contact__grid {
+  display: grid; }
+  @media screen and (min-width: 768px) {
+    .section__faqs__contact__grid {
+      grid-template-columns: 1fr 1fr; } }
+
 .search__faqs {
   width: 768px;
   display: flex;
@@ -355,6 +355,30 @@ header a:hover {
 
 .questions__description {
   font-size: .8rem; }
+
+.contact {
+  width: 100%;
+  display: grid; }
+  .contact__form {
+    display: grid;
+    margin: auto; }
+    @media screen and (min-width: 768px) {
+      .contact__form {
+        width: 512px; } }
+    .contact__form input {
+      padding: .5rem;
+      margin: .3rem;
+      border: none;
+      border: 1px solid #c5c5c5;
+      border-radius: 30px;
+      outline: none; }
+    .contact__form textarea {
+      padding: .5rem;
+      margin: .3rem;
+      border: none;
+      border: 1px solid #c5c5c5;
+      border-radius: 30px;
+      outline: none; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -442,6 +466,11 @@ body {
           font-weight: bold; }
   .section__acerca img {
     border-radius: 20px !important; }
+  .section__acerca p {
+    background: black;
+    color: white;
+    padding: 0 1rem;
+    border-radius: 30px; }
   .section__contenido {
     display: grid;
     padding: 0 1rem; }

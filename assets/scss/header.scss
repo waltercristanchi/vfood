@@ -1,22 +1,5 @@
 @import "colors";
-@mixin socialMediaBorder($media){
-  @if $media == facebook {
-background-color: $facebook-background;  
-color: $facebook-background;
-}
-  @if $media == twitter {
-background-color:$twitter-background ;  
-color: $twitter-background;
-}
-  @if $media == instagram {
-background-color: $instagram-background;  
-color: $instagram-background;
-}
-  @if $media == whatsapp {
-background-color: $whatsapp-background;  
-color: $whatsapp-background;
-}
-}
+
 
 header {
   a {
@@ -45,23 +28,17 @@ header {
     transition: .2s;
   
   }
-  $socialMedia : facebook, twitter, instagram, whatsapp;
-
-@each $social in $socialMedia{
-  &--#{$social}:hover{
+  img:hover{
     cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-  
-    @include socialMediaBorder($social);
+    height: 35px;
+    width: 35px;
+  }
 
-  }  
-  
-}
+
 
 
 }
+
 .search{
   display: none;
 }
