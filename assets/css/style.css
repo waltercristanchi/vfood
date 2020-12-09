@@ -206,13 +206,13 @@ header a:hover {
   .section__grid--tiendas {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: .5rem;
     grid-row-gap: .5rem;
     overflow: hidden; }
   .card--tiendas {
-    min-width: 380px !important;
-    max-width: 380px !important;
+    min-width: 360px !important;
+    max-width: 360px !important;
     margin: 0 !important;
     padding: 0 !important; }
     .card--tiendas__background {
@@ -509,7 +509,7 @@ footer {
     margin: 2rem auto;
     width: 75%; }
     .section__background {
-      height: 480px; }
+      height: 512px; }
     .section__destacado {
       grid-template-columns: 1fr 1fr; }
   .section__background__grilla {
