@@ -239,10 +239,10 @@ header a:hover {
   background-size: cover;
   background-position: center;
   height: 240px;
-  border-radius: 30px;
   display: grid;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  border-radius: 30px; }
   .section__background__blog__title {
     background: black;
     color: white;
