@@ -3,9 +3,9 @@
 @import "blog";
 @import "colors";
 @import "faqs";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
 
   background: rgb(214, 214, 214) !important;
 }
@@ -17,17 +17,21 @@ body{
   width: 180px;
   height: 60px;
   padding: 1rem;
-  transition: .2s;
-  margin: auto;
+  transition: .2s !important;
+  margin: 1rem auto;
   align-items: center;
+  &__footer{
+    height: 50px;
+    width: 120px;
+    align-items: center;
+  }
 }
 
 .button:hover {
-  border-radius: 6px;
-  font-size: 1.1rem;
+  width: 185px;
+  height: 62px;
+  border-radius: 35px;
   border: 1px solid gray;
-  width: 200px;
-  height: 70px;
   box-shadow: 0px 11px 6px -3px rgba(0,0,0,0.17);
 
 }
@@ -42,11 +46,12 @@ body{
   
 
 &__background{
+  border-radius: 30px;
+
   margin-top: 0;
   background-image: url(https://waltercristanchi.github.io/vfood/img/background.jpg);
   background-size: cover;
   height: 100%;
-  border-radius: 20px;
   &__contenido{
     background: green;
     height: 100%;
@@ -95,13 +100,25 @@ body{
   }
   &__card{
     display: grid;
-    background-image: url(https://waltercristanchi.github.io/vfood/img/background-tiendas.jpg);
     filter: grayscale(100%);
     margin: .2rem;
     padding: 0;
     border-radius: 20px;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    &--tiendas{
+      background-image: url(https://waltercristanchi.github.io/vfood/img/background-tiendas.jpg);
+
+    }
+    &--productos{
+      background-image: url(https://waltercristanchi.github.io/vfood/img/promociones.jpg);
+
+    }
+    &--envio{
+      background-image: url(https://waltercristanchi.github.io/vfood/img/envio_gratis.jpg);
+
+    }
     &__text{
       
       color: white;
@@ -118,25 +135,29 @@ body{
   }
 
 }
+.container{
+  max-width: 100% !important;
+}
 &__acerca{
 
   img{
     border-radius: 20px !important;
   }
-  p{
-    background: black;
-    color: white;
-    padding: 0 1rem;
-    border-radius: 30px;
-
-  }
+ 
 }
 &__contenido{
   display: grid;
   padding: 0 1rem;
 }
 }
-
+.acerca__text{
+  background: gray;
+  color: black;
+  padding: 0 1rem;
+  border-radius: 30px;
+  height: 100%;
+  text-align: center;
+}
 
 .card {
   margin: auto;
@@ -152,6 +173,11 @@ footer {
   margin-top: 1.2rem;
   background: black;
   text-align: center;
+  a{
+    color: green ;
+
+  }
+
   p {
     color: white;
     display: flex;
@@ -186,7 +212,7 @@ footer {
 @media screen and (min-width: 768px) {
   .section{
     margin: 2rem auto;
-    width: 75%;
+    width: 85%;
     &__background{ 
       height: 512px;
     }

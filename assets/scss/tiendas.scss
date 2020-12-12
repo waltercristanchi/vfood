@@ -28,11 +28,9 @@
 .section{
   padding: 0 .5rem;
  &__grid{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: center;
  &--tiendas{
-   flex-wrap: nowrap;
    overflow-x: scroll;
  }
 
@@ -66,77 +64,76 @@
 .card{
   border-radius: 10px !important;
   overflow: hidden;
-  
-}
-.card--productos{
-  display: flex !important;
-  flex-direction: unset !important;
-  background: white;
-  border-radius: 2px;
-  width: 100% !important;
-  height: fit-content !important;
-  padding: .5rem !important;
-  margin: 1rem .2rem !important;
-  align-items: center;
-  * {
-    transition: .2s;
-  }
-  div{
-    height: 70px;
-  }
-  img{
-    width: 80px;
-    height: 80px;
+  &--productos{
+    display: flex !important;
+    flex-direction: unset !important;
+    background: white;
     border-radius: 2px;
-    margin-right: 1rem;
-
+    width: 100% !important;
+    height: fit-content !important;
+    padding: .5rem !important;
+    margin: 1rem .2rem !important;
+    align-items: center;
+    * {
+      transition: .2s;
+    }
+    div{
+      height: 70px;
+    }
+    img{
+      width: 80px;
+      height: 80px;
+      border-radius: 2px;
+      margin-right: 1rem;
+  
+    }
+  
+    h4{
+      width: fit-content;
+      display: flex;
+      margin-right: 2rem;
+  
+    }
+    p{
+      display: block;
+      width: fit-content;
+      animation-name: aparecer;
+      animation-duration: .4s;
+    }
+  
   }
+  &--tiendas{
 
-  h4{
-    width: fit-content;
-    display: flex;
-    margin-right: 2rem;
-
+    margin: .8rem .5rem !important;
+    padding: 0 !important;
+    &__background{
+      width: 100%;
+      height: 140px;
+      background-size: cover;
+    }
+    &__imagen{
+      display: flex;
+      height: 80px;
+      width: 80px;
+      margin: auto;
+      margin-top: -3.5rem;
+    }
+    &__texto{
+      display: grid;
+      justify-content: center;
+    }
   }
-  p{
-    display: block;
-    width: fit-content;
-    animation-name: aparecer;
-    animation-duration: .4s;
-  }
-
-
 }
-.card--tiendas{
-  min-width: 380px !important;
-  max-width: 380px !important;
-  margin: .8rem .5rem !important;
-  padding: 0 !important;
-  &__background{
-    width: 100%;
-    height: 140px;
-    background-size: cover;
-  }
-  &__imagen{
-    display: flex;
-    height: 80px;
-    width: 80px;
-    margin: auto;
-    margin-top: -3.5rem;
-  }
-  &__texto{
-    display: grid;
-    justify-content: center;
-  }
-}
+
 @media screen and (min-width: 480px){
+ .card{
+  min-width: 320px !important;
+  max-width: 320px !important;
  
-  .card--productos{
+  &--productos{
     background: white;
     border-radius: 2px;
     display: grid !important;
-    width: 320px !important;
-    min-width: 320px !important;
     height: 280px !important;
     margin: 0 .8rem;
     justify-content: center;
@@ -174,8 +171,8 @@
   
   }
 
-  .card--productos:hover{
-    cursor: pointer;
+  &--productos:hover{
+  
     height: 280px;
     img{
       width: 320px;
@@ -192,21 +189,9 @@
       padding: 0 .5rem;
     }
   }
- 
-  .section__grid--tiendas{
+  &--tiendas{
     
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: .5rem;
-    grid-row-gap: .5rem;
-    overflow: hidden;
-  
-  }
-  .card--tiendas{
-    
-    min-width: 360px !important;
-    max-width: 360px !important;
+   
     margin: 0 !important;
     padding: 0 !important;
     &__background{
@@ -226,6 +211,24 @@
       justify-content: center;
     }
   }
+}
+.card:hover{
+  box-shadow: 0px 11px 6px -3px rgba(0,0,0,0.17);
+  border: 1px solid rgb(219, 219, 219);
+    cursor: pointer;
+}
+ 
+  .section__grid--tiendas{
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    overflow: hidden;
+  
+  }
+  
  
  
   .modalContent{
@@ -234,10 +237,13 @@
   }
 }
 
-@media screen and (min-width: 1600px){
-  .section__grid--tiendas{
-    display: flex;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+@media screen and (min-width: 768px){
+  .section__grid{
+  
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  
+  
 }

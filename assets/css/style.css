@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 header a {
   transition: .2s; }
 
@@ -80,11 +80,9 @@ header a:hover {
 .section {
   padding: 0 .5rem; }
   .section__grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: center; }
     .section__grid--tiendas {
-      flex-wrap: nowrap;
       overflow-x: scroll; }
   .section__top__tiendas {
     width: 100%;
@@ -109,115 +107,40 @@ header a:hover {
 .card {
   border-radius: 10px !important;
   overflow: hidden; }
-
-.card--productos {
-  display: flex !important;
-  flex-direction: unset !important;
-  background: white;
-  border-radius: 2px;
-  width: 100% !important;
-  height: fit-content !important;
-  padding: .5rem !important;
-  margin: 1rem .2rem !important;
-  align-items: center; }
-  .card--productos * {
-    transition: .2s; }
-  .card--productos div {
-    height: 70px; }
-  .card--productos img {
-    width: 80px;
-    height: 80px;
-    border-radius: 2px;
-    margin-right: 1rem; }
-  .card--productos h4 {
-    width: fit-content;
-    display: flex;
-    margin-right: 2rem; }
-  .card--productos p {
-    display: block;
-    width: fit-content;
-    animation-name: aparecer;
-    animation-duration: .4s; }
-
-.card--tiendas {
-  min-width: 380px !important;
-  max-width: 380px !important;
-  margin: .8rem .5rem !important;
-  padding: 0 !important; }
-  .card--tiendas__background {
-    width: 100%;
-    height: 140px;
-    background-size: cover; }
-  .card--tiendas__imagen {
-    display: flex;
-    height: 80px;
-    width: 80px;
-    margin: auto;
-    margin-top: -3.5rem; }
-  .card--tiendas__texto {
-    display: grid;
-    justify-content: center; }
-
-@media screen and (min-width: 480px) {
   .card--productos {
+    display: flex !important;
+    flex-direction: unset !important;
     background: white;
     border-radius: 2px;
-    display: grid !important;
-    width: 320px !important;
-    min-width: 320px !important;
-    height: 280px !important;
-    margin: 0 .8rem;
-    justify-content: center;
-    padding: 0 !important; }
-    .card--productos__texto {
-      display: grid;
-      justify-content: center; }
+    width: 100% !important;
+    height: fit-content !important;
+    padding: .5rem !important;
+    margin: 1rem .2rem !important;
+    align-items: center; }
     .card--productos * {
       transition: .2s; }
     .card--productos div {
       height: 70px; }
     .card--productos img {
-      margin: 0;
-      margin-top: .5rem;
-      width: 300px;
-      height: 180px;
-      border-radius: 2px; }
+      width: 80px;
+      height: 80px;
+      border-radius: 2px;
+      margin-right: 1rem; }
     .card--productos h4 {
-      width: fit-content; }
+      width: fit-content;
+      display: flex;
+      margin-right: 2rem; }
     .card--productos p {
-      display: none;
+      display: block;
       width: fit-content;
       animation-name: aparecer;
       animation-duration: .4s; }
-  .card--productos:hover {
-    cursor: pointer;
-    height: 280px; }
-    .card--productos:hover img {
-      width: 320px;
-      height: 190px;
-      margin-top: 0px !important; }
-    .card--productos:hover h4 {
-      margin-left: 10px; }
-    .card--productos:hover p {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 .5rem; }
-  .section__grid--tiendas {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: .5rem;
-    grid-row-gap: .5rem;
-    overflow: hidden; }
   .card--tiendas {
-    min-width: 360px !important;
-    max-width: 360px !important;
-    margin: 0 !important;
+    margin: .8rem .5rem !important;
     padding: 0 !important; }
     .card--tiendas__background {
       width: 100%;
-      height: 180px;
+      height: 140px;
       background-size: cover; }
     .card--tiendas__imagen {
       display: flex;
@@ -228,21 +151,93 @@ header a:hover {
     .card--tiendas__texto {
       display: grid;
       justify-content: center; }
+
+@media screen and (min-width: 480px) {
+  .card {
+    min-width: 320px !important;
+    max-width: 320px !important; }
+    .card--productos {
+      background: white;
+      border-radius: 2px;
+      display: grid !important;
+      height: 280px !important;
+      margin: 0 .8rem;
+      justify-content: center;
+      padding: 0 !important; }
+      .card--productos__texto {
+        display: grid;
+        justify-content: center; }
+      .card--productos * {
+        transition: .2s; }
+      .card--productos div {
+        height: 70px; }
+      .card--productos img {
+        margin: 0;
+        margin-top: .5rem;
+        width: 300px;
+        height: 180px;
+        border-radius: 2px; }
+      .card--productos h4 {
+        width: fit-content; }
+      .card--productos p {
+        display: none;
+        width: fit-content;
+        animation-name: aparecer;
+        animation-duration: .4s; }
+    .card--productos:hover {
+      height: 280px; }
+      .card--productos:hover img {
+        width: 320px;
+        height: 190px;
+        margin-top: 0px !important; }
+      .card--productos:hover h4 {
+        margin-left: 10px; }
+      .card--productos:hover p {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 .5rem; }
+    .card--tiendas {
+      margin: 0 !important;
+      padding: 0 !important; }
+      .card--tiendas__background {
+        width: 100%;
+        height: 180px;
+        background-size: cover; }
+      .card--tiendas__imagen {
+        display: flex;
+        height: 80px;
+        width: 80px;
+        margin: auto;
+        margin-top: -3.5rem; }
+      .card--tiendas__texto {
+        display: grid;
+        justify-content: center; }
+  .card:hover {
+    box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.17);
+    border: 1px solid #dbdbdb;
+    cursor: pointer; }
+  .section__grid--tiendas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    overflow: hidden; }
   .modalContent {
     display: grid;
     justify-content: center; } }
 
-@media screen and (min-width: 1600px) {
-  .section__grid--tiendas {
-    display: flex;
+@media screen and (min-width: 768px) {
+  .section__grid {
+    display: grid;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr; } }
 
 .section__background__blog {
   background-image: url(/img/background-blog.jpg);
   background-size: cover;
-  width: 85%;
-  height: 480px;
+  height: 240px;
   border-radius: 30px;
   display: grid;
   justify-content: center;
@@ -263,39 +258,38 @@ header a:hover {
   @media screen and (min-width: 1024px) {
     .section__posts__container {
       grid-template-columns: 1fr 1fr 1fr; } }
-  @media screen and (min-width: 1280px) {
-    .section__posts__container {
-      grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.section__posts__card {
+.card--posts {
+  height: 320px;
   background: white;
   display: grid;
   border-radius: 3px;
   justify-content: center;
   transition: .2s; }
-  .section__posts__card h3 {
+  .card--posts h3 {
     margin: auto; }
-  .section__posts__card p {
+  .card--posts p {
     margin-left: .5rem;
     height: 120px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-  .section__posts__card a {
+  .card--posts a {
     margin-left: .5rem; }
-  .section__posts__card__img {
+  .card--posts img {
     display: grid;
     background-size: cover;
     width: 100%;
     height: 240px;
-    padding: 0 .5rem;
+    padding-top: .5rem;
     transition: .2s; }
 
-.section__posts__card:hover {
+.card--posts:hover {
+  height: 100%;
   padding: 0; }
-  .section__posts__card:hover img {
+  .card--posts:hover img {
     padding: 0; }
-  .section__posts__card:hover p {
+  .card--posts:hover p {
     text-overflow: inherit;
     white-space: normal; }
 
@@ -305,9 +299,7 @@ header a:hover {
   display: grid;
   justify-content: center;
   align-items: center;
-  border-radius: 30px;
-  width: 100%;
-  height: 300px;
+  height: 240px;
   text-align: center; }
 
 .section__faqs__questions {
@@ -346,9 +338,10 @@ header a:hover {
 
 .questions__card {
   background: white;
-  height: 80px;
+  height: 100px;
   width: 260px;
-  padding: 1rem; }
+  padding: .5rem;
+  border-radius: 10px; }
 
 .questions__title {
   font-size: 1rem; }
@@ -380,8 +373,19 @@ header a:hover {
       border-radius: 30px;
       outline: none; }
 
+.map {
+  height: 100%;
+  width: 90%;
+  background-image: url(/img/mapa.jpg);
+  background-size: cover;
+  border-radius: 30px;
+  padding: 1rem; }
+
+.button--submit {
+  margin-left: auto !important; }
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   background: #d6d6d6 !important; }
 
 .button {
@@ -392,16 +396,19 @@ body {
   width: 180px;
   height: 60px;
   padding: 1rem;
-  transition: .2s;
-  margin: auto;
+  transition: .2s !important;
+  margin: 1rem auto;
   align-items: center; }
+  .button__footer {
+    height: 50px;
+    width: 120px;
+    align-items: center; }
 
 .button:hover {
-  border-radius: 6px;
-  font-size: 1.1rem;
+  width: 185px;
+  height: 62px;
+  border-radius: 35px;
   border: 1px solid gray;
-  width: 200px;
-  height: 70px;
   box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.17); }
 
 .contenido {
@@ -411,11 +418,11 @@ body {
   margin: 1rem auto;
   width: 100%; }
   .section__background {
+    border-radius: 30px;
     margin-top: 0;
     background-image: url(https://waltercristanchi.github.io/vfood/img/background.jpg);
     background-size: cover;
-    height: 100%;
-    border-radius: 20px; }
+    height: 100%; }
     .section__background__contenido {
       background: green;
       height: 100%; }
@@ -448,13 +455,19 @@ body {
       display: grid; }
     .section__destacado__card {
       display: grid;
-      background-image: url(https://waltercristanchi.github.io/vfood/img/background-tiendas.jpg);
       filter: grayscale(100%);
       margin: .2rem;
       padding: 0;
       border-radius: 20px;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      background-size: cover; }
+      .section__destacado__card--tiendas {
+        background-image: url(https://waltercristanchi.github.io/vfood/img/background-tiendas.jpg); }
+      .section__destacado__card--productos {
+        background-image: url(https://waltercristanchi.github.io/vfood/img/promociones.jpg); }
+      .section__destacado__card--envio {
+        background-image: url(https://waltercristanchi.github.io/vfood/img/envio_gratis.jpg); }
       .section__destacado__card__text {
         color: white;
         text-align: center; }
@@ -464,16 +477,21 @@ body {
           cursor: pointer;
           font-size: 1.1rem;
           font-weight: bold; }
+  .section .container {
+    max-width: 100% !important; }
   .section__acerca img {
     border-radius: 20px !important; }
-  .section__acerca p {
-    background: black;
-    color: white;
-    padding: 0 1rem;
-    border-radius: 30px; }
   .section__contenido {
     display: grid;
     padding: 0 1rem; }
+
+.acerca__text {
+  background: gray;
+  color: black;
+  padding: 0 1rem;
+  border-radius: 30px;
+  height: 100%;
+  text-align: center; }
 
 .card {
   margin: auto;
@@ -486,6 +504,8 @@ footer {
   margin-top: 1.2rem;
   background: black;
   text-align: center; }
+  footer a {
+    color: green; }
   footer p {
     color: white;
     display: flex;
@@ -507,7 +527,7 @@ footer {
 @media screen and (min-width: 768px) {
   .section {
     margin: 2rem auto;
-    width: 75%; }
+    width: 85%; }
     .section__background {
       height: 512px; }
     .section__destacado {
