@@ -302,6 +302,7 @@ header a:hover {
   justify-content: center;
   align-items: center;
   height: 240px;
+  border-radius: 30px;
   text-align: center; }
 
 .section__faqs__questions {
