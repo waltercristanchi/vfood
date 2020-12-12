@@ -235,8 +235,9 @@ header a:hover {
     grid-template-columns: 1fr 1fr 1fr; } }
 
 .section__background__blog {
-  background-image: url(/img/background-blog.jpg);
+  background-image: url(https://waltercristanchi.github.io/vfood/img/background-blog.jpg);
   background-size: cover;
+  background-position: center;
   height: 240px;
   border-radius: 30px;
   display: grid;
@@ -294,8 +295,9 @@ header a:hover {
     white-space: normal; }
 
 .section__faqs__background {
-  background-image: url(/img/background-faqs.jpg);
+  background-image: url(https://waltercristanchi.github.io/vfood/img/background-faqs.jpg);
   background-size: cover;
+  background-position: center;
   display: grid;
   justify-content: center;
   align-items: center;
