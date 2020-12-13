@@ -64,6 +64,14 @@
 .card{
   border-radius: 10px !important;
   overflow: hidden;
+  &__spinner{
+    background: red;
+    position: absolute;
+    top: 1rem;
+    width: 80px;
+    height: 20px;
+    border-radius: 0px 12px 12px 0px;
+  }
   &--productos{
     display: flex !important;
     flex-direction: unset !important;
@@ -77,7 +85,7 @@
     * {
       transition: .2s;
     }
-    div{
+    .description{
       height: 70px;
     }
     img{
@@ -145,7 +153,7 @@
     * {
       transition: .2s;
     }
-    div{
+    .descripcion{
       height: 70px;
     }
     img{

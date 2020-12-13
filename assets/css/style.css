@@ -107,6 +107,13 @@ header a:hover {
 .card {
   border-radius: 10px !important;
   overflow: hidden; }
+  .card__spinner {
+    background: red;
+    position: absolute;
+    top: 1rem;
+    width: 80px;
+    height: 20px;
+    border-radius: 0px 12px 12px 0px; }
   .card--productos {
     display: flex !important;
     flex-direction: unset !important;
@@ -119,7 +126,7 @@ header a:hover {
     align-items: center; }
     .card--productos * {
       transition: .2s; }
-    .card--productos div {
+    .card--productos .description {
       height: 70px; }
     .card--productos img {
       width: 80px;
@@ -169,7 +176,7 @@ header a:hover {
         justify-content: center; }
       .card--productos * {
         transition: .2s; }
-      .card--productos div {
+      .card--productos .descripcion {
         height: 70px; }
       .card--productos img {
         margin: 0;
@@ -387,6 +394,29 @@ header a:hover {
 .button--submit {
   margin-left: auto !important; }
 
+.section__cart {
+  border-radius: 30px;
+  background: white; }
+
+.section__card__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.summary {
+  display: grid;
+  justify-content: right;
+  align-items: end; }
+
+th {
+  padding: .5rem 2rem;
+  border-bottom: 1px solid gray; }
+
+td {
+  padding: 1.5rem 1rem; }
+
+tr {
+  margin-bottom: 1.5rem; }
+
 body {
   font-family: 'Lato', sans-serif;
   background: #d6d6d6 !important; }
@@ -414,9 +444,6 @@ body {
   border: 1px solid gray;
   box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.17); }
 
-.contenido {
-  padding: 0 .5rem; }
-
 .section {
   margin: 1rem auto;
   width: 100%; }
@@ -426,37 +453,34 @@ body {
     background-image: url(https://waltercristanchi.github.io/vfood/img/background.jpg);
     background-size: cover;
     height: 100%; }
-    .section__background__contenido {
-      background: green;
-      height: 100%; }
-    .section__background__grilla {
+    .section__background__grid {
       display: grid;
       grid-template-columns: 1fr; }
-    .section__background__titulo {
+    .section__background__title {
       display: grid;
       justify-content: center;
       align-items: center; }
-      .section__background__titulo p {
+      .section__background__title p {
         width: 100%;
         margin: auto;
         text-align: center;
         font-weight: bold;
         color: black; }
-      .section__background__titulo h1 {
+      .section__background__title h1 {
         width: 70%;
         margin: auto;
         font-weight: bold;
         text-align: center;
         color: black;
         text-shadow: 2px 2px gray; }
-  .section__destacado {
+  .section__relevant {
     height: 480px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto; }
-    .section__destacado__right__grid {
+    .section__relevant__right__grid {
       display: grid; }
-    .section__destacado__card {
+    .section__relevant__card {
       display: grid;
       filter: grayscale(100%);
       margin: .2rem;
@@ -465,36 +489,32 @@ body {
       justify-content: center;
       align-items: center;
       background-size: cover; }
-      .section__destacado__card--tiendas {
+      .section__relevant__card--shops {
         background-image: url(https://waltercristanchi.github.io/vfood/img/background-tiendas.jpg); }
-      .section__destacado__card--productos {
+      .section__relevant__card--products {
         background-image: url(https://waltercristanchi.github.io/vfood/img/promociones.jpg); }
-      .section__destacado__card--envio {
+      .section__relevant__card--shipping {
         background-image: url(https://waltercristanchi.github.io/vfood/img/envio_gratis.jpg); }
-      .section__destacado__card__text {
+      .section__relevant__card__text {
         color: white;
         text-align: center; }
-        .section__destacado__card__text p {
+        .section__relevant__card__text p {
           transition: .2s; }
-        .section__destacado__card__text p:hover {
+        .section__relevant__card__text p:hover {
           cursor: pointer;
           font-size: 1.1rem;
           font-weight: bold; }
   .section .container {
     max-width: 100% !important; }
-  .section__acerca img {
+  .section__about img {
     border-radius: 20px !important; }
-  .section__contenido {
-    display: grid;
-    padding: 0 1rem; }
-
-.acerca__text {
-  background: gray;
-  color: black;
-  padding: 0 1rem;
-  border-radius: 30px;
-  height: 100%;
-  text-align: center; }
+  .section__about__text {
+    background: gray;
+    color: black;
+    padding: 0 1rem;
+    border-radius: 30px;
+    height: 100%;
+    text-align: center; }
 
 .card {
   margin: auto;
@@ -533,12 +553,10 @@ footer {
     width: 85%; }
     .section__background {
       height: 512px; }
-    .section__destacado {
+    .section__relevant {
       grid-template-columns: 1fr 1fr; }
-  .section__background__grilla {
-    grid-template-columns: 1fr 1fr; }
-  #titulo p {
-    text-shadow: none; } }
+  .section__background__grid {
+    grid-template-columns: 1fr 1fr; } }
 
 @keyframes aparecer {
   0% {

@@ -3,6 +3,8 @@
 @import "blog";
 @import "colors";
 @import "faqs";
+@import "cart";
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 body{
   font-family: 'Lato', sans-serif;
@@ -36,10 +38,6 @@ body{
 
 }
 
-
-.contenido{
-  padding: 0 .5rem;
-}
 .section {
   margin: 1rem auto;
    width: 100%;
@@ -52,17 +50,13 @@ body{
   background-image: url(https://waltercristanchi.github.io/vfood/img/background.jpg);
   background-size: cover;
   height: 100%;
-  &__contenido{
-    background: green;
-    height: 100%;
-
-  }
-  &__grilla{
+  
+  &__grid{
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  &__titulo{
+  &__title{
     display: grid;
   justify-content: center;
   align-items: center;
@@ -87,7 +81,7 @@ body{
 
 
 }
-&__destacado{
+&__relevant{
   
   height: 480px;
   display: grid;
@@ -107,15 +101,15 @@ body{
     justify-content: center;
     align-items: center;
     background-size: cover;
-    &--tiendas{
+    &--shops{
       background-image: url(https://waltercristanchi.github.io/vfood/img/background-tiendas.jpg);
 
     }
-    &--productos{
+    &--products{
       background-image: url(https://waltercristanchi.github.io/vfood/img/promociones.jpg);
 
     }
-    &--envio{
+    &--shipping{
       background-image: url(https://waltercristanchi.github.io/vfood/img/envio_gratis.jpg);
 
     }
@@ -138,25 +132,22 @@ body{
 .container{
   max-width: 100% !important;
 }
-&__acerca{
+&__about{
 
   img{
     border-radius: 20px !important;
   }
- 
+  &__text{
+    background: gray;
+    color: black;
+    padding: 0 1rem;
+    border-radius: 30px;
+    height: 100%;
+    text-align: center;
+  }
+  
 }
-&__contenido{
-  display: grid;
-  padding: 0 1rem;
-}
-}
-.acerca__text{
-  background: gray;
-  color: black;
-  padding: 0 1rem;
-  border-radius: 30px;
-  height: 100%;
-  text-align: center;
+
 }
 
 .card {
@@ -216,21 +207,18 @@ footer {
     &__background{ 
       height: 512px;
     }
-    &__destacado{
+    &__relevant{
   
      
       grid-template-columns: 1fr 1fr;
     
   }
 }
-.section__background__grilla{
+.section__background__grid{
   grid-template-columns: 1fr 1fr;
 
 }
   
-  #titulo p {
-    text-shadow: none;
-  }
 }
 @keyframes aparecer {
   0%   {opacity: 0;}

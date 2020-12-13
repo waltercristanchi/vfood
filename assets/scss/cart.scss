@@ -1,0 +1,28 @@
+.section__cart{
+  border-radius: 30px;
+  background: white;
+ 
+}
+.section__card__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.summary{
+  display: grid;
+  justify-content: right;
+  align-items: end;
+}
+
+th{
+      padding: .5rem 2rem;
+      border-bottom: 1px solid gray;
+    
+  }
+  td{
+    padding: 1.5rem 1rem;
+  }
+  tr{
+    margin-bottom: 1.5rem;
+  }
+ 
