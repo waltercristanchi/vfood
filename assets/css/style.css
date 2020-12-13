@@ -82,12 +82,12 @@ header a:hover {
   .section__grid {
     display: grid;
     justify-content: center; }
-    .section__grid--tiendas {
+    .section__grid--shops {
       overflow-x: scroll; }
-  .section__top__tiendas {
+  .section__background__shops {
     width: 100%;
     height: 240px; }
-    .section__top__tiendas__container {
+    .section__background__shops__container {
       display: grid;
       justify-content: center;
       align-items: center;
@@ -96,9 +96,9 @@ header a:hover {
       width: 100%;
       height: 100%;
       text-align: center; }
-      .section__top__tiendas__container h2 {
+      .section__background__shops__container h2 {
         color: white; }
-      .section__top__tiendas__container p {
+      .section__background__shops__container p {
         background: black;
         color: white;
         padding: .2rem 1rem;
@@ -114,7 +114,7 @@ header a:hover {
     width: 80px;
     height: 20px;
     border-radius: 0px 12px 12px 0px; }
-  .card--productos {
+  .card--products {
     display: flex !important;
     flex-direction: unset !important;
     background: white;
@@ -124,38 +124,38 @@ header a:hover {
     padding: .5rem !important;
     margin: 1rem .2rem !important;
     align-items: center; }
-    .card--productos * {
+    .card--products * {
       transition: .2s; }
-    .card--productos .description {
+    .card--products .description {
       height: 70px; }
-    .card--productos img {
+    .card--products img {
       width: 80px;
       height: 80px;
       border-radius: 2px;
       margin-right: 1rem; }
-    .card--productos h4 {
+    .card--products h4 {
       width: fit-content;
       display: flex;
       margin-right: 2rem; }
-    .card--productos p {
+    .card--products p {
       display: block;
       width: fit-content;
       animation-name: aparecer;
       animation-duration: .4s; }
-  .card--tiendas {
+  .card--shops {
     margin: .8rem .5rem !important;
     padding: 0 !important; }
-    .card--tiendas__background {
+    .card--shops__background {
       width: 100%;
       height: 140px;
       background-size: cover; }
-    .card--tiendas__imagen {
+    .card--shops__image {
       display: flex;
       height: 80px;
       width: 80px;
       margin: auto;
       margin-top: -3.5rem; }
-    .card--tiendas__texto {
+    .card--shops__text {
       display: grid;
       justify-content: center; }
 
@@ -163,7 +163,7 @@ header a:hover {
   .card {
     min-width: 320px !important;
     max-width: 320px !important; }
-    .card--productos {
+    .card--products {
       background: white;
       border-radius: 2px;
       display: grid !important;
@@ -171,60 +171,60 @@ header a:hover {
       margin: 0 .8rem;
       justify-content: center;
       padding: 0 !important; }
-      .card--productos__texto {
+      .card--products__text {
         display: grid;
         justify-content: center; }
-      .card--productos * {
+      .card--products * {
         transition: .2s; }
-      .card--productos .descripcion {
+      .card--products .description {
         height: 70px; }
-      .card--productos img {
+      .card--products img {
         margin: 0;
         margin-top: .5rem;
         width: 300px;
         height: 180px;
         border-radius: 2px; }
-      .card--productos h4 {
+      .card--products h4 {
         width: fit-content; }
-      .card--productos p {
+      .card--products p {
         display: none;
         width: fit-content;
         animation-name: aparecer;
         animation-duration: .4s; }
-    .card--productos:hover {
+    .card--products:hover {
       height: 280px; }
-      .card--productos:hover img {
+      .card--products:hover img {
         width: 320px;
         height: 190px;
         margin-top: 0px !important; }
-      .card--productos:hover h4 {
+      .card--products:hover h4 {
         margin-left: 10px; }
-      .card--productos:hover p {
+      .card--products:hover p {
         display: flex;
         justify-content: space-between;
         width: 100%;
         padding: 0 .5rem; }
-    .card--tiendas {
+    .card--shops {
       margin: 0 !important;
       padding: 0 !important; }
-      .card--tiendas__background {
+      .card--shops__background {
         width: 100%;
         height: 180px;
         background-size: cover; }
-      .card--tiendas__imagen {
+      .card--shops__image {
         display: flex;
         height: 80px;
         width: 80px;
         margin: auto;
         margin-top: -3.5rem; }
-      .card--tiendas__texto {
+      .card--shops__text {
         display: grid;
         justify-content: center; }
   .card:hover {
     box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.17);
     border: 1px solid #dbdbdb;
     cursor: pointer; }
-  .section__grid--tiendas {
+  .section__grid--shops {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
