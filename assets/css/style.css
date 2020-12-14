@@ -24,7 +24,7 @@ header a:hover {
 .search {
   display: none; }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .search {
     display: flex;
     align-items: center;
@@ -74,7 +74,8 @@ header a:hover {
       padding: 2rem 0;
       border-bottom: 1px solid white; }
   .footer__grid {
-    display: grid; }
+    display: grid;
+    align-items: center; }
     @media screen and (min-width: 768px) {
       .footer__grid {
         grid-template-columns: 1fr 1fr 1fr; } }
