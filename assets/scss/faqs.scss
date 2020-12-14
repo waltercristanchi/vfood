@@ -33,17 +33,26 @@
   padding: .5rem;
   background: white;
   border: none;
-  border: 1px solid rgb(230, 230, 230);
+  border: 1px solid rgb(185, 185, 185);
+
   border-radius: 20px;
+  transition: .2s;
 
   input {
+    width: 100%;
     background: none;
     border: none;
     outline: none;
+
   }
   p{
     margin: 0;
   }
+}
+.search__faqs:hover{
+  
+    padding: 1rem;
+
 }
 .questions{
   &__grid{
@@ -58,6 +67,13 @@
     width: 260px;
     padding: .5rem;
     border-radius: 10px;
+    transition: .2s;
+  }
+  &__card:hover{
+
+    box-shadow: 0px 11px 6px -3px rgba(0,0,0,0.17);
+    cursor: pointer;
+
   }
   &__title{
     font-size: 1rem;

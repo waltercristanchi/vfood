@@ -61,7 +61,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="../views/carrito.html"><img width="24px" height="24px"
-                  src="../img/carrito.png" alt=""> Carrito</a>
+                  src="https://waltercristanchi.github.io/vfoog/img/carrito.png" alt=""> Carrito</a>
               <a class="dropdown-item" href="../views/cuenta.html">Configuración</a>
 
           </li>
@@ -72,7 +72,7 @@
 
   </section>
   <section class="section section__faqs__questions">
-    <div class="search__faqs">
+    <div class=" search search__faqs">
       <input type="text" placeholder="Buscar">
       <p>🔎</p>
     </div>
@@ -177,35 +177,23 @@
       <div class="map"></div>
     </div>
   </section>
-  <footer>
-    <div class="section__container">
-      <div class="row">
-        <div class="col-md-4">
-          <div style="display: grid;">
-            <a href="contacto">Sobre Nosotros</a>
-            <a href="">Telefono: +54362563151</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div style="display: grid;">
-            <a href="contacto">Contacto</a>
-            <a href="">Email: email@example.com</a>
-            <a href="./views/faqs.html">Preguntas Frecuentes</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div style="display: grid;">
-            <form class="form">
-
-              <label style="color: white;" for="inputPassword2" class="">Suscribirse al NewsLetter</label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
-              <button class="button button__footer" type="submit">Suscribirse</button>
-
-            </form>
-          </div>
-        </div>
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__links">
+        <a href="">Sobre Nosotros</a>
+        <a href="">Preguntas Frecuentes</a>
+        <a href="">Politica de Privacidad</a>
       </div>
-
+      <div class="footer__title">
+        <h3>VFood</h3>
+      </div>
+      <div class="footer__newsletter">
+        <form action="">
+          <label for="email">Suscribirse al Newsletter</label>
+          <input type="text" name="email" id="email" placeholder="Email">
+          <input class="button button--footer" type="submit" value="Suscribirse">
+        </form>
+      </div>
     </div>
   </footer>
   <style>

@@ -61,7 +61,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="../views/carrito.html"><img width="24px" height="24px"
-                  src="../img/carrito.png" alt=""> Carrito</a>
+                  src="https://waltercristanchi.github.io/vfood/img/carrito.png" alt=""> Carrito</a>
               <a class="dropdown-item" href="../views/cuenta.html">Configuración</a>
 
           </li>
@@ -158,8 +158,8 @@
         <div class="card card--products">
           <img src="../img/burritos-vegetales.jpg" alt="">
           <h4>$370</h4>
-          <div>
-            <p class="description">Burrito de Vegetales <a data-toggle="modal" data-target="#exampleModal" href=""><br>
+          <div class="description">
+            <p>Burrito de Vegetales <a data-toggle="modal" data-target="#exampleModal" href=""><br>
                 Ver
                 Más</a></p>
           </div>
@@ -168,8 +168,8 @@
         <div class="card card--products">
           <img src="../img/hamburguesa-vegana.jpg" alt="">
           <h4>$250</h4>
-          <div>
-            <p class="description">Hamburguesa Vegana<a data-toggle="modal" data-target="#exampleModal" href=""><br> Ver
+          <div class="description">
+            <p>Hamburguesa Vegana<a data-toggle="modal" data-target="#exampleModal" href=""><br> Ver
                 Más</a></p>
           </div>
 
@@ -177,8 +177,8 @@
         <div class="card card--products">
           <img src="../img/empanada-vegetales.jpg" alt="">
           <h4>$250</h4>
-          <div>
-            <p class="description">Empanada de Vegetales<a data-toggle="modal" data-target="#exampleModal" href=""><br>
+          <div class="description">
+            <p>Empanada de Vegetales<a data-toggle="modal" data-target="#exampleModal" href=""><br>
                 Ver
                 Más</a></p>
           </div>
@@ -187,8 +187,8 @@
         <div class="card card--products">
           <img src="../img/sandwich-vegetal.jpg" alt="">
           <h4>$250</h4>
-          <div>
-            <p class="description">Sandwich Vegetal <a data-toggle="modal" data-target="#exampleModal" href=""><br> Ver
+          <div class="description">
+            <p>Sandwich Vegetal <a data-toggle="modal" data-target="#exampleModal" href=""><br> Ver
                 Más</a></p>
           </div>
 
@@ -196,8 +196,8 @@
         <div class="card card--products">
           <img src="../img/sandwich-vegetal.jpg" alt="">
           <h4>$250</h4>
-          <div>
-            <p class="description">Sandwich Vegetal <a data-toggle="modal" data-target="#exampleModal" href=""><br> Ver
+          <div class="description">
+            <p>Sandwich Vegetal <a data-toggle="modal" data-target="#exampleModal" href=""><br> Ver
                 Más</a></p>
           </div>
 
@@ -290,35 +290,23 @@
 
   </section>
 
-  <footer>
-    <div class="section__container">
-      <div class="row">
-        <div class="col-md-4">
-          <div style="display: grid;">
-            <a href="contacto">Sobre Nosotros</a>
-            <a href="">Telefono: +54362563151</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div style="display: grid;">
-            <a href="contacto">Contacto</a>
-            <a href="">Email: email@example.com</a>
-            <a href="./views/faqs.html">Preguntas Frecuentes</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div style="display: grid;">
-            <form class="form">
-
-              <label style="color: white;" for="inputPassword2" class="">Suscribirse al NewsLetter</label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
-              <button class="button button__footer" type="submit">Suscribirse</button>
-
-            </form>
-          </div>
-        </div>
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__links">
+        <a href="">Sobre Nosotros</a>
+        <a href="">Preguntas Frecuentes</a>
+        <a href="">Politica de Privacidad</a>
       </div>
-
+      <div class="footer__title">
+        <h3>VFood</h3>
+      </div>
+      <div class="footer__newsletter">
+        <form action="">
+          <label for="email">Suscribirse al Newsletter</label>
+          <input type="text" name="email" id="email" placeholder="Email">
+          <input class="button button--footer" type="submit" value="Suscribirse">
+        </form>
+      </div>
     </div>
   </footer>
 </body>

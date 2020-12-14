@@ -53,6 +53,167 @@ header a:hover {
   .search {
     display: flex; } }
 
+.footer {
+  width: 100%;
+  margin-top: 1.2rem;
+  background: black;
+  text-align: center; }
+  .footer a {
+    color: green; }
+  .footer p {
+    color: white;
+    display: flex;
+    align-items: center; }
+  .footer img {
+    width: 32px;
+    height: 32px;
+    margin-right: .5rem; }
+  .footer__title {
+    color: white; }
+    .footer__title h3 {
+      padding: 2rem 0;
+      border-bottom: 1px solid white; }
+  .footer__grid {
+    display: grid; }
+    @media screen and (min-width: 768px) {
+      .footer__grid {
+        grid-template-columns: 1fr 1fr 1fr; } }
+  .footer__links {
+    display: grid;
+    grid-row-gap: 1rem; }
+  .footer__newsletter form {
+    display: grid;
+    justify-content: center; }
+    .footer__newsletter form label {
+      color: white; }
+    .footer__newsletter form input {
+      width: 100%;
+      border-radius: 30px;
+      padding: .5rem; }
+
+.button {
+  border: none;
+  background: green;
+  color: white;
+  border-radius: 50px;
+  width: 180px;
+  height: 60px;
+  padding: 1rem;
+  transition: .2s !important;
+  margin: 1rem auto;
+  align-items: center; }
+  .button--footer {
+    height: 50px;
+    width: 120px;
+    align-items: center; }
+
+.button:hover {
+  border-radius: 35px;
+  border: 1px solid gray;
+  box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.17); }
+
+.section {
+  margin: 1rem auto;
+  width: 100%; }
+  .section__background {
+    border-radius: 30px;
+    margin-top: 0;
+    background-image: url(https://waltercristanchi.github.io/vfood/img/background.jpg);
+    background-size: cover;
+    height: 100%; }
+    .section__background__grid {
+      display: grid;
+      grid-template-columns: 1fr; }
+    .section__background__title {
+      display: grid;
+      justify-content: center;
+      align-items: center; }
+      .section__background__title p {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        font-weight: bold;
+        color: black; }
+      .section__background__title h1 {
+        width: 70%;
+        margin: auto;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        text-shadow: 2px 2px gray; }
+  .section__relevant {
+    height: 480px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; }
+    .section__relevant__right__grid {
+      display: grid; }
+    .section__relevant__card {
+      display: grid;
+      filter: grayscale(100%);
+      margin: .2rem;
+      padding: 0;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+      background-size: cover; }
+      .section__relevant__card--shops {
+        background-image: url(https://waltercristanchi.github.io/vfood/img/background-tiendas.jpg); }
+      .section__relevant__card--products {
+        background-image: url(https://waltercristanchi.github.io/vfood/img/promociones.jpg); }
+      .section__relevant__card--shipping {
+        background-image: url(https://waltercristanchi.github.io/vfood/img/envio_gratis.jpg); }
+      .section__relevant__card__text {
+        color: white;
+        text-align: center; }
+        .section__relevant__card__text p {
+          transition: .2s; }
+        .section__relevant__card__text p:hover {
+          cursor: pointer;
+          font-size: 1.1rem;
+          font-weight: bold; }
+  .section .container {
+    max-width: 100% !important; }
+  .section__about img {
+    border-radius: 20px !important; }
+  .section__about__text {
+    background: gray;
+    color: black;
+    padding: 0 1rem;
+    border-radius: 30px;
+    height: 100%;
+    text-align: center; }
+
+.card {
+  margin: auto;
+  width: 100%;
+  padding: 0 .5rem;
+  margin: 1rem 0; }
+
+.form {
+  display: block;
+  justify-content: center; }
+
+.btn {
+  margin-top: 1rem; }
+
+@media screen and (min-width: 768px) {
+  .section {
+    margin: 2rem auto;
+    width: 85%; }
+    .section__background {
+      height: 512px; }
+    .section__relevant {
+      grid-template-columns: 1fr 1fr; }
+  .section__background__grid {
+    grid-template-columns: 1fr 1fr; } }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100; } }
+
 .carousel-control-prev-icon {
   display: none !important;
   height: fit-content;
@@ -191,19 +352,17 @@ header a:hover {
         width: fit-content;
         animation-name: aparecer;
         animation-duration: .4s; }
-    .card--products:hover {
-      height: 280px; }
-      .card--products:hover img {
-        width: 320px;
-        height: 190px;
-        margin-top: 0px !important; }
-      .card--products:hover h4 {
-        margin-left: 10px; }
-      .card--products:hover p {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0 .5rem; }
+    .card--products:hover img {
+      width: 320px;
+      height: 190px;
+      margin-top: 0px !important; }
+    .card--products:hover h4 {
+      margin-left: 10px; }
+    .card--products:hover p {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 .5rem; }
     .card--shops {
       margin: 0 !important;
       padding: 0 !important; }
@@ -331,14 +490,19 @@ header a:hover {
   padding: .5rem;
   background: white;
   border: none;
-  border: 1px solid #e6e6e6;
-  border-radius: 20px; }
+  border: 1px solid #b9b9b9;
+  border-radius: 20px;
+  transition: .2s; }
   .search__faqs input {
+    width: 100%;
     background: none;
     border: none;
     outline: none; }
   .search__faqs p {
     margin: 0; }
+
+.search__faqs:hover {
+  padding: 1rem; }
 
 .questions__grid {
   display: grid;
@@ -351,7 +515,12 @@ header a:hover {
   height: 100px;
   width: 260px;
   padding: .5rem;
-  border-radius: 10px; }
+  border-radius: 10px;
+  transition: .2s; }
+
+.questions__card:hover {
+  box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.17);
+  cursor: pointer; }
 
 .questions__title {
   font-size: 1rem; }
@@ -399,8 +568,7 @@ header a:hover {
   background: white; }
 
 .section__card__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
+  display: grid; }
 
 .summary {
   display: grid;
@@ -408,158 +576,25 @@ header a:hover {
   align-items: end; }
 
 th {
-  padding: .5rem 2rem;
-  border-bottom: 1px solid gray; }
+  text-align: center;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid #dddddd; }
 
 td {
+  text-align: center;
   padding: 1.5rem 1rem; }
 
 tr {
   margin-bottom: 1.5rem; }
 
+@media screen and (min-width: 768px) {
+  .section__card__grid {
+    grid-template-columns: 1fr 1fr; }
+  th {
+    padding: 5rem 5rem; }
+  td {
+    padding: 1.5rem 5rem; } }
+
 body {
   font-family: 'Lato', sans-serif;
   background: #d6d6d6 !important; }
-
-.button {
-  border: none;
-  background: green;
-  color: white;
-  border-radius: 50px;
-  width: 180px;
-  height: 60px;
-  padding: 1rem;
-  transition: .2s !important;
-  margin: 1rem auto;
-  align-items: center; }
-  .button__footer {
-    height: 50px;
-    width: 120px;
-    align-items: center; }
-
-.button:hover {
-  width: 185px;
-  height: 62px;
-  border-radius: 35px;
-  border: 1px solid gray;
-  box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.17); }
-
-.section {
-  margin: 1rem auto;
-  width: 100%; }
-  .section__background {
-    border-radius: 30px;
-    margin-top: 0;
-    background-image: url(https://waltercristanchi.github.io/vfood/img/background.jpg);
-    background-size: cover;
-    height: 100%; }
-    .section__background__grid {
-      display: grid;
-      grid-template-columns: 1fr; }
-    .section__background__title {
-      display: grid;
-      justify-content: center;
-      align-items: center; }
-      .section__background__title p {
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        font-weight: bold;
-        color: black; }
-      .section__background__title h1 {
-        width: 70%;
-        margin: auto;
-        font-weight: bold;
-        text-align: center;
-        color: black;
-        text-shadow: 2px 2px gray; }
-  .section__relevant {
-    height: 480px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto; }
-    .section__relevant__right__grid {
-      display: grid; }
-    .section__relevant__card {
-      display: grid;
-      filter: grayscale(100%);
-      margin: .2rem;
-      padding: 0;
-      border-radius: 20px;
-      justify-content: center;
-      align-items: center;
-      background-size: cover; }
-      .section__relevant__card--shops {
-        background-image: url(https://waltercristanchi.github.io/vfood/img/background-tiendas.jpg); }
-      .section__relevant__card--products {
-        background-image: url(https://waltercristanchi.github.io/vfood/img/promociones.jpg); }
-      .section__relevant__card--shipping {
-        background-image: url(https://waltercristanchi.github.io/vfood/img/envio_gratis.jpg); }
-      .section__relevant__card__text {
-        color: white;
-        text-align: center; }
-        .section__relevant__card__text p {
-          transition: .2s; }
-        .section__relevant__card__text p:hover {
-          cursor: pointer;
-          font-size: 1.1rem;
-          font-weight: bold; }
-  .section .container {
-    max-width: 100% !important; }
-  .section__about img {
-    border-radius: 20px !important; }
-  .section__about__text {
-    background: gray;
-    color: black;
-    padding: 0 1rem;
-    border-radius: 30px;
-    height: 100%;
-    text-align: center; }
-
-.card {
-  margin: auto;
-  width: 100%;
-  padding: 0 .5rem;
-  margin: 1rem 0; }
-
-footer {
-  width: 100%;
-  margin-top: 1.2rem;
-  background: black;
-  text-align: center; }
-  footer a {
-    color: green; }
-  footer p {
-    color: white;
-    display: flex;
-    align-items: center; }
-  footer img {
-    width: 32px;
-    height: 32px;
-    margin-right: .5rem; }
-  footer .row {
-    margin-right: 0 !important; }
-
-.form {
-  display: block;
-  justify-content: center; }
-
-.btn {
-  margin-top: 1rem; }
-
-@media screen and (min-width: 768px) {
-  .section {
-    margin: 2rem auto;
-    width: 85%; }
-    .section__background {
-      height: 512px; }
-    .section__relevant {
-      grid-template-columns: 1fr 1fr; }
-  .section__background__grid {
-    grid-template-columns: 1fr 1fr; } }
-
-@keyframes aparecer {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 100; } }
