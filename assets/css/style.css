@@ -416,26 +416,30 @@ header a:hover {
     border-radius: 30px;
     padding: 0 1rem; }
 
-.section__posts__container {
-  display: grid;
-  grid-row-gap: 1rem;
-  grid-column-gap: 1rem; }
-  @media screen and (min-width: 650px) {
-    .section__posts__container {
-      grid-template-columns: 1fr 1fr; } }
-  @media screen and (min-width: 1024px) {
-    .section__posts__container {
-      grid-template-columns: 1fr 1fr 1fr; } }
+.section__posts {
+  min-height: 920px; }
+  .section__posts__grid {
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem; }
+    @media screen and (min-width: 650px) {
+      .section__posts__grid {
+        grid-template-columns: 1fr 1fr; } }
+    @media screen and (min-width: 1024px) {
+      .section__posts__grid {
+        grid-template-columns: 1fr 1fr 1fr; } }
 
 .card--posts {
-  height: 320px;
+  height: 360px;
+  width: 360px;
   background: white;
   display: grid;
   border-radius: 3px;
   justify-content: center;
   transition: .2s; }
   .card--posts h3 {
-    margin: auto; }
+    margin: auto;
+    margin-top: .5rem; }
   .card--posts p {
     margin-left: .5rem;
     height: 120px;
@@ -443,7 +447,11 @@ header a:hover {
     overflow: hidden;
     text-overflow: ellipsis; }
   .card--posts a {
-    margin-left: .5rem; }
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    margin-left: auto; }
   .card--posts img {
     display: grid;
     background-size: cover;
