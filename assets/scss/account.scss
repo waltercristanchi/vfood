@@ -1,0 +1,33 @@
+.section__personal__info{
+  display: grid;
+  grid-row-gap: .2rem;
+  &__card{
+    background: white;
+    border-radius: 30px;
+    width: 75%;
+    display: grid;
+    align-items: center;
+    margin: auto;
+    padding: .2rem;
+    div{
+      display: grid;
+      grid-template-columns: 30%  1fr;
+      grid-row-gap: .5rem;
+      border-bottom: 1px solid rgb(211, 211, 211);
+
+    }
+    p{
+      color: gray;
+      margin: .5rem;
+      margin-right: 2rem;
+    }
+    h4{
+      margin: .5rem;
+    }
+    a{
+      margin-left: auto;
+      margin-right: .5rem;
+      display: grid;
+    }
+  }
+}

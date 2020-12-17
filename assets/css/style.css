@@ -556,7 +556,7 @@ header a:hover {
 .map {
   height: 100%;
   width: 90%;
-  background-image: url(/img/mapa.jpg);
+  background-image: url(https://waltercristanchi.github.io/vfood/img/mapa.jpg);
   background-size: cover;
   border-radius: 30px;
   padding: 1rem; }
@@ -592,9 +592,36 @@ tr {
   .section__card__grid {
     grid-template-columns: 1fr 1fr; }
   th {
-    padding: 5rem 5rem; }
+    padding: 1.5rem 5rem; }
   td {
     padding: 1.5rem 5rem; } }
+
+.section__personal__info {
+  display: grid;
+  grid-row-gap: .2rem; }
+  .section__personal__info__card {
+    background: white;
+    border-radius: 30px;
+    width: 75%;
+    display: grid;
+    align-items: center;
+    margin: auto;
+    padding: .2rem; }
+    .section__personal__info__card div {
+      display: grid;
+      grid-template-columns: 30%  1fr;
+      grid-row-gap: .5rem;
+      border-bottom: 1px solid lightgray; }
+    .section__personal__info__card p {
+      color: gray;
+      margin: .5rem;
+      margin-right: 2rem; }
+    .section__personal__info__card h4 {
+      margin: .5rem; }
+    .section__personal__info__card a {
+      margin-left: auto;
+      margin-right: .5rem;
+      display: grid; }
 
 body {
   font-family: 'Lato', sans-serif;
