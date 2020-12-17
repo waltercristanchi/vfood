@@ -116,11 +116,12 @@
   }
 
 }
-.container{
-  max-width: 100% !important;
-}
-&__about{
 
+&__about{
+  &__grid{
+    display: grid;
+    max-width: 100% !important;
+  }
   img{
     border-radius: 20px !important;
   }
@@ -169,6 +170,11 @@
      
       grid-template-columns: 1fr 1fr;
     
+  }
+  &__about__grid{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
   }
 }
 .section__background__grid{

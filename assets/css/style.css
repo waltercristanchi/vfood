@@ -173,7 +173,8 @@ header a:hover {
           cursor: pointer;
           font-size: 1.1rem;
           font-weight: bold; }
-  .section .container {
+  .section__about__grid {
+    display: grid;
     max-width: 100% !important; }
   .section__about img {
     border-radius: 20px !important; }
@@ -206,6 +207,10 @@ header a:hover {
       height: 512px; }
     .section__relevant {
       grid-template-columns: 1fr 1fr; }
+    .section__about__grid {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: .5rem;
+      grid-row-gap: .5rem; }
   .section__background__grid {
     grid-template-columns: 1fr 1fr; } }
 
@@ -275,6 +280,7 @@ header a:hover {
     top: 1rem;
     width: 80px;
     height: 20px;
+    margin-left: -1rem;
     border-radius: 0px 12px 12px 0px; }
   .card--products {
     display: flex !important;
@@ -380,6 +386,8 @@ header a:hover {
       .card--shops__text {
         display: grid;
         justify-content: center; }
+    .card__spinner {
+      margin-left: 0; }
   .card:hover {
     box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.17);
     border: 1px solid #dbdbdb;
@@ -395,13 +403,17 @@ header a:hover {
     display: grid;
     justify-content: center; } }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
   .section__grid {
     display: grid;
     justify-content: center;
+    grid-template-columns: 1fr 1fr; } }
+
+@media screen and (min-width: 1148px) {
+  .section__grid {
     grid-template-columns: 1fr 1fr 1fr; } }
 
-.section__background__blog {
+.section__background__blog__container {
   background-image: url(https://waltercristanchi.github.io/vfood/img/background-blog.jpg);
   background-size: cover;
   background-position: center;
@@ -410,11 +422,13 @@ header a:hover {
   justify-content: center;
   align-items: center;
   border-radius: 30px; }
-  .section__background__blog__title {
-    background: black;
-    color: white;
-    border-radius: 30px;
-    padding: 0 1rem; }
+
+.section__background__blog p {
+  background: black;
+  color: white;
+  border-radius: 30px;
+  padding: 0 1rem;
+  text-align: center; }
 
 .section__posts {
   min-height: 920px; }
@@ -469,7 +483,7 @@ header a:hover {
     text-overflow: inherit;
     white-space: normal; }
 
-.section__faqs__background {
+.section__faqs__background__container {
   background-image: url(https://waltercristanchi.github.io/vfood/img/background-faqs.jpg);
   background-size: cover;
   background-position: center;
@@ -491,7 +505,7 @@ header a:hover {
       grid-template-columns: 1fr 1fr; } }
 
 .search__faqs {
-  width: 768px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -515,17 +529,32 @@ header a:hover {
 
 .questions__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: .5rem;
-  grid-row-gap: .5rem; }
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: .2rem;
+  grid-row-gap: .2rem; }
+  @media screen and (min-width: 512px) {
+    .questions__grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: .5rem; } }
+  @media screen and (min-width: 768px) {
+    .questions__grid {
+      grid-template-columns: 1fr 1fr 1fr; } }
+  @media screen and (min-width: 850px) {
+    .questions__grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
 .questions__card {
   background: white;
-  height: 100px;
-  width: 260px;
-  padding: .5rem;
+  height: 105px;
+  width: 180px;
+  padding: .2rem;
   border-radius: 10px;
   transition: .2s; }
+  @media screen and (min-width: 768px) {
+    .questions__card {
+      height: 100px;
+      width: 260px;
+      padding: .5rem; } }
 
 .questions__card:hover {
   box-shadow: 0px 11px 6px -3px rgba(0, 0, 0, 0.17);
@@ -541,8 +570,7 @@ header a:hover {
   width: 100%;
   display: grid; }
   .contact__form {
-    display: grid;
-    margin: auto; }
+    display: grid; }
     @media screen and (min-width: 768px) {
       .contact__form {
         width: 512px; } }
@@ -562,12 +590,16 @@ header a:hover {
       outline: none; }
 
 .map {
-  height: 100%;
-  width: 90%;
+  height: 360px;
+  width: 100%;
   background-image: url(https://waltercristanchi.github.io/vfood/img/mapa.jpg);
   background-size: cover;
   border-radius: 30px;
   padding: 1rem; }
+  @media screen and (min-width: 768px) {
+    .map {
+      height: 100%;
+      width: 90%; } }
 
 .button--submit {
   margin-left: auto !important; }
@@ -581,24 +613,32 @@ header a:hover {
 
 .summary {
   display: grid;
-  justify-content: right;
-  align-items: end; }
+  justify-content: center;
+  margin: 1rem; }
+  @media screen and (min-width: 768px) {
+    .summary {
+      justify-content: right;
+      align-items: end; } }
+  .summary__content {
+    display: grid;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid #bebebe;
+    border-radius: 30px; }
 
 th {
   text-align: center;
-  padding: .5rem 1rem;
+  padding: .5rem .2rem;
   border-bottom: 1px solid #dddddd; }
 
 td {
   text-align: center;
-  padding: 1.5rem 1rem; }
+  padding: .5rem .2rem; }
 
 tr {
   margin-bottom: 1.5rem; }
 
 @media screen and (min-width: 1440px) {
-  .section__card__grid {
-    grid-template-columns: 1fr 1fr; }
   th {
     padding: 1.5rem 5rem; }
   td {
@@ -610,14 +650,13 @@ tr {
   .section__personal__info__card {
     background: white;
     border-radius: 30px;
-    width: 75%;
+    width: 100%;
     display: grid;
     align-items: center;
-    margin: auto;
     padding: .2rem; }
     .section__personal__info__card div {
       display: grid;
-      grid-template-columns: 30%  1fr;
+      grid-template-columns: 20%  1fr;
       grid-row-gap: .5rem;
       border-bottom: 1px solid lightgray; }
     .section__personal__info__card p {
@@ -625,11 +664,19 @@ tr {
       margin: .5rem;
       margin-right: 2rem; }
     .section__personal__info__card h4 {
+      font-size: 1rem;
       margin: .5rem; }
     .section__personal__info__card a {
       margin-left: auto;
-      margin-right: .5rem;
+      margin-right: 1rem;
       display: grid; }
+
+@media screen and (min-width: 768px) {
+  .section__personal__info__card {
+    width: 75%;
+    margin: auto; }
+    .section__personal__info__card h4 {
+      font-size: 1.5rem; } }
 
 body {
   font-family: 'Lato', sans-serif;

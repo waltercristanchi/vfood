@@ -1,18 +1,20 @@
 .section__background__blog{
-  background-image: url(https://waltercristanchi.github.io/vfood/img/background-blog.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 240px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  &__title{
+  &__container{
+    background-image: url(https://waltercristanchi.github.io/vfood/img/background-blog.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 240px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+  p{
     background: black;
     color: white;
     border-radius: 30px;
     padding: 0 1rem;
-
+    text-align: center;
 
   }
 }
