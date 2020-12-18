@@ -385,7 +385,8 @@ header a:hover {
         margin-top: -3.5rem; }
       .card--shops__text {
         display: grid;
-        justify-content: center; }
+        justify-content: center;
+        text-align:center;}
     .card__spinner {
       margin-left: 0; }
   .card:hover {
