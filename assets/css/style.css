@@ -646,6 +646,7 @@ tr {
     padding: 1.5rem 5rem; } }
 
 .section__personal__info {
+  min-height: 510px;
   display: grid;
   grid-row-gap: .2rem; }
   .section__personal__info__card {
